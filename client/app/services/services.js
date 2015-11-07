@@ -15,8 +15,25 @@ var getLinks = function () {
 
   };
 
+
+
+var addLink = function (url) {
+  return $http({
+        method: 'POST',
+        url: '/api/links',
+        data: url
+      })
+      .then(function (resp) {
+        console.log('resp:', resp);
+        return resp.status;
+      });
+
+  };
+
+
 return {
-  getLinks: getLinks
+  getLinks: getLinks,
+  addLink: addLink
 };
 
 })
