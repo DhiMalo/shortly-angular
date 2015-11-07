@@ -11,15 +11,16 @@ var LinkSchema = new mongoose.Schema({
 });
 
 var createSha = function(url) {
+  // creating a SHA to store in place of password
   var shasum = crypto.createHash('sha1');
   shasum.update(url);
   return shasum.digest('hex').slice(0, 5);
 };
 
-LinkSchema.pre('save', function(next){
+LinkSchema.pre('save', function (next){
   var code = createSha(this.url);
   this.code = code;
   next();
 });
 
-module.exports = mongoose.model('Link', LinkSchema);
+module.exports = mongoose.model('links', LinkSchema);
