@@ -6,12 +6,12 @@ var getLinks = function () {
   return $http({
         method: 'GET',
         url: '/api/links'
+      })
+      .then(function (resp) {
+        console.log('insidegetlinks');
+        console.log('respdata', resp.data);
+        return resp.data;
       });
-      // .then(function (resp) {
-      //   console.log('insidegetlinks');
-      //   console.log('respdata', resp.data);
-      //   return resp.data.state;
-      // });
 
   };
 

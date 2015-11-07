@@ -8,18 +8,16 @@ angular.module('shortly.links', [])
 
   $scope.getLinks = function(){
                       Links.getLinks()
-                      .then(function (resp) {
+                      .then(function (data) {
                       console.log('insidegetlinks');
-                      console.log('respdatalinkjs', resp.data);
-                      return resp.data;
+                      
+                      $scope.data.links = data;
       });
                     }
 
-  // $scope.link = {};           
-  
-  $scope.data.links = $scope.getLinks();
+$scope.getLinks();
 
-});
+}); 
 
 
 //$scope.data.links = UNDEFINED:
