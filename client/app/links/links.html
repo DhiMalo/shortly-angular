@@ -4,8 +4,8 @@
  <div ng-init="getLinks()">
   <div ng-repeat='key1 in data.links'>
     <script>$scope.myurls=key1.url</script>
-    <button ng-click="count = count + 1" "location.href={{key1.url}}" ng-init="count = 0"> {{'Visit ' + key1.code + ' to access ' + key1.url}} </button> 
-    <span>count : {{count}}</span>
+    <button ng-click="Popularity = Popularity + 1" "location.href={{key1.url}}" ng-init="Popularity = 0"> {{'Visit ' + key1.code + ' to access ' + key1.url}} </button> 
+    <span>Popularity : {{Popularity}}</span>
     <br>
   </div>
 </div>
