@@ -6,19 +6,12 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
   </head>
   <body>
-    <h1>Shortly Angular</h1>
-
-    <!-- <div ng-controller="AuthController">
-      
-
-      {{$routeParams}} -->
+    <h1>myShortener</h1>
 
     <div ng-view>
     
-<!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
-
-
-    <!-- </div> -->
+<!-- All templates are loaded here. -->
+  
     </div>
     <button id='signOut' onclick="signOutFunc()">SignOut</button>
 
@@ -30,7 +23,9 @@
     <script src="app/shorten/shorten.js"></script>
     <script src="app/services/services.js"></script>
     <script src="app/app.js"></script>
-    <script> function signOutFunc() { window.localStorage['com.shortly'] = ''; }
+
+    <script> function signOutFunc() { window.localStorage['com.shortly'] = ''; } // To Do : Place this function in an Authorization Controller file. 
+
     </script>
   </body>
 </html>
