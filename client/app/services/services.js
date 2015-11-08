@@ -2,31 +2,31 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
   
-var getLinks = function () {
-  return $http({
-        method: 'GET',
-        url: '/api/links'
-      })
-      .then(function (resp) {
-        return resp.data;
-      });
+var getLinks = function () { // This is the "Links" factory.  It returns an object with two methods in it: getLinks and addLink.  These form the structure for "Links" to operate.
 
-  };
+return $http({
+  method: 'GET',
+  url: '/api/links'
+})
+.then(function (resp) {
+  return resp.data;
+});
 
+};
 
 
 var addLink = function (url) {
   return $http({
-        method: 'POST',
-        url: '/api/links',
-        data: url
-      })
-      .then(function (resp) {
-        console.log('resp:', resp);
-        return resp.status;
-      });
+    method: 'POST',
+    url: '/api/links',
+    data: url
+  })
+  .then(function (resp) {
+    console.log('resp:', resp);
+    return resp.status;
+  });
 
-  };
+};
 
 
 return {
