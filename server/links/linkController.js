@@ -32,7 +32,7 @@ module.exports = {
     });
   },
 
-  newLink: function (req, res, next) {
+  newLink: function (req, res, next) { 
     var url = req.body.url;
     console.log(req.body);
     if (!util.isValidUrl(url)) {

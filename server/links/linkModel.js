@@ -3,11 +3,11 @@ var mongoose = require('mongoose'),
 
 var LinkSchema = new mongoose.Schema({
  visits: Number,
- link: String,
+ link: String, //...shortly.api/links/02853 = 
  title: String,
- code: String,
+ code: String,   //02853
  base_url: String,
- url: String
+ url: String //actual address of the information
 });
 
 var createSha = function(url) {

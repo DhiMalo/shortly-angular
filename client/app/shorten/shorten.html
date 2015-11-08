@@ -1,6 +1,19 @@
-<div id='container'>
-<!-- Your code here -->
+<div id="shortener" ng-controller="ShortenController">
 
+  Welcome to Short.ly! Enter a URL to shorten!
+  
+
+  <h1>Shorten</h1>
+  <button onclick=""> 
+  <form name="urlEntryForm" ng-submit='addLink()'>
+    <input type="text" ng-model='link.url'>
+
+  </form> 
+  submit </button><br><br>
+
+  <a href="#/links"> Like to see your shortened links? <strong>Visit Links</strong> ...</a>
+<br>
+<br>
 </div>
 
 

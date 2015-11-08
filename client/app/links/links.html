@@ -1,9 +1,30 @@
 
 
-<div id='container'>
+<div id='links'>
  <!-- ng-controller="LinksController as main"> -->
 <!-- Return to resolve why Links does not show up in mongoDB or here when called. -->
-Hi
-  <!-- Your html here -->
-  {{main.logLinks}}
+<p>Welcome to Links!</p>
+
+<p><a href="#/shorten"><strong>(Click here to shorten more URLs!)</strong></a></p>
+
+  <div ng-init="getLinks()">
+
+  <div ng-repeat='key1 in data.links'>
+
+  <script>$scope.myurls=key1.url</script>
+    
+  <button ng-click="count = count + 1" "location.href={{key1.url}}" ng-init="count = 0"> {{'Visit ' + key1.code + ' to access ' + key1.url}} </button> 
+
+  <span>count : {{count}}</span>
+ 
+  
+  <br>
+  </div>
+  </div>
+ 
+  <br>
+  <a href="#/signup">Not your account? <strong>Sign out</strong> ...</a>
+
+
+
 </div>
